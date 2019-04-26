@@ -1,0 +1,192 @@
+html {
+	font-family: verdana;
+	font-family: 'Varela Round', sans-serif;
+	
+	line-height: 1.5;
+	color: black;
+	font-size: 20px;
+	width: 100%;
+    height: 100%;
+}
+
+body {
+	scroll-behavior: smooth;
+	margin: auto;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+	.b_overlay {
+		position: absolute;
+	}
+}
+
+.middle {
+	text-align: center;	
+}
+
+.ab_oben  {
+	height: 101vh;
+	color: white;
+	font-size: 25px;
+}
+
+@media screen and (min-width: 750px) {
+	.ab_oben  {
+		height: 101vh;
+		color: white;
+		font-size: 37px;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.ab_oben  {
+		height: 101vh;
+		color: white;
+		font-size: 50px;
+	}
+}
+
+.ab_zwischen {
+	height: 20vh;
+	display: block;
+	background-color: hsla( 0, 0, 0, 0);
+}
+
+.autobereich {
+	z-index: 0;
+    position: relative;
+    padding-bottom: 27%; 
+	width: 50%; 
+    padding-top: 10px;
+    height: 0;
+}
+
+.autobereich-g {
+	z-index: 0;
+    position: relative;
+    padding-bottom: 54%; 
+	width: 90%; 
+    padding-top: 10px;
+    height: 0;
+}
+
+.autobereich-rg {
+	z-index: 0;
+    position: relative;
+    padding-bottom: 54%; 
+	width: 100%; 
+    padding-top: 10px;
+    height: 0;
+}
+
+.logo {
+	width: 100%;
+	z-index: 10;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.text-wrapper {
+	padding-bottom: 40px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+	box-shadow: 14px 14px 198px -2px rgba(0,0,0,0.75);
+	background-color: white;
+	size: auto;
+	position: relative;
+	
+	height: auto;
+	width: auto;
+}
+
+@media screen and (min-width: 1000px) {
+	.flex_container {
+		display: flex;
+		align-items: stretch;
+	}
+	.half1 {
+		width: 50%;
+		padding: 10px;
+	}
+	.half2 {
+	width: 50%;
+	padding: 10px;
+	}
+}
+
+/* Menu */
+
+.circle {
+	height: 25px;
+	width: 25px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	position: fixed;
+	transition-duration: 1s;
+	z-index: 100;
+
+	background-image: url("files/home.png");
+	background-size: cover;
+}
+
+.circle:hover {
+	height: 50px;
+	width: 50px;
+	transition-duration: 1s;
+}
+
+/*parallax*/
+
+.wrapper {
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 2px;
+}
+ 
+.parallax::after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	transform: translateZ(-1px) scale(1.6);
+	background-size: cover;
+	background-position: center;
+}
+
+.bg1::after {
+	background-image: url('files/code.png');
+}
+  
+.bg2::after {
+	background-image: url('files/cubeRun.gif');
+}
+
+.heading {
+	font-family: 'Righteous', cursive;
+	font-size: 30px;
+	text-align: center;
+
+	position: relative;
+	height: 100vh;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	overflow: hidden;
+}
