@@ -1,0 +1,18 @@
+#btTop {
+    position: fixed; 
+    bottom: 5px; 
+    right: 5px;
+    z-index: 99;
+	border: none;
+	outline: none;
+    background-color: hsla(0, 100%, 50%, 0);
+	color: white;
+	transition: 0.5s;
+	display: none;
+}
+
+#btTop:hover {
+    color: red;
+	bottom: 20px;
+	transition: 0.5s;
+}
