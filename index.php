@@ -11,27 +11,34 @@
 			<a href="#Pad"><span></span></a>
 		</div>
 
+	<!--Party Game-->	
+
+		<div class="flex_container text-wrapper" id="PartyGame" style="border-radius: 20px 20px 0px 0px; background-color: white">
+			<div class="releaseDate">07.01.2020 - Now</div>
+			<section class="half1 halfRight halfBg" style="background-image: url('files/partyGame.png'); background-size: contain;"></section>
+			<section class="half2 halfLeft">
+				<h2><b>Party Game</b></h2>
+				<p>
+				Ein kleines Couchparty Spiel. Es ist derzeit noch stark in Entwicklung aber ihr könnt es demnächst spielen! In diesem Projekt werde
+				ich mich mit dem neuen Input-Systen von Unity beschäftigen und versuche ein möglichst lustiges Spiel für Couchpartys zu entwickeln.
+				<br>
+				</p>
+			</section>
+		</div>
 	<!--Pad-->	
-		<div class="text-wrapper" id="Pad" style="border-radius: 20px 20px 0px 0px;">
-			<button onclick="coll('coll2')" id="coll2">
-				<div class="flex_container">
-					<div class="releaseDate">18.08.2019 - Now</div>
-					<section class="half1 halfBg" style="background-image: url('files/pad_logo.png'); background-size: 80%;"></section>
-					<section class="half2">
-						<h2><b>Pad</b></h2>
-						<p>
-						Mein erstes Spiel, welches ich offiziell veröffentlichen werde. Durch neuartige Controlls und entspannende 
-						Musik wird jedes Level zu einer kleinen Herausforderung die man gespielt haben muss!<br>
-						<br>
-						<u>Mehr erfahren...</u>
-						</p>
-					</section>
-				</div>
-				<div class="more" id="coll2_c">
-					<u><a href="https://play.google.com/apps/internaltest/4701185661665572333" target="_blank">Join Pre-Alpha (Android)</a></u><br>
-					<u><a href="https://play.google.com/store/apps/details?id=com.LaserKaspar.Pad&hl=de&ah=OJ0-Yk1FLdG6-fO0ZwypNOonmlM" target="_blank">Download (After you have joined)</a></u>
-				</div>
-			</button>
+		<div class="flex_container text-wrapper" id="Pad">
+			<div class="releaseDate">18.08.2019 - Now</div>
+			<section class="half1 halfBg" style="background-image: url('files/pad_logo.png'); background-size: 80%;"></section>
+			<section class="half2">
+				<h2><b>Pad</b></h2>
+				<p>
+				Mein erstes Spiel, welches ich offiziell veröffentlichen werde. Durch neuartige Controlls und entspannende 
+				Musik wird jedes Level zu einer kleinen Herausforderung die man gespielt haben muss!<br>
+				<br>
+				<u><a href="https://play.google.com/apps/internaltest/4701185661665572333" target="_blank">Join Pre-Alpha (Android)</a></u><br>
+				<u><a href="https://play.google.com/store/apps/details?id=com.LaserKaspar.Pad&hl=de&ah=OJ0-Yk1FLdG6-fO0ZwypNOonmlM" target="_blank">Download (After you have joined)</a></u>
+				</p>
+			</section>
 		</div>
 
 	<!--BurgerMaker-->
