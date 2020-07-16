@@ -200,7 +200,6 @@ p a {
 }
 
 .about {
-    margin: 30px 0px 30px 0px;
     padding: 20px 20px 20px 20px;
     grid-area: about;
     justify-self: center;
