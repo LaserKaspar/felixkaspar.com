@@ -1,3 +1,7 @@
+:root {
+    --bgColor: #0000004f
+}
+
 body {
     display: grid;
     justify-content: center;
@@ -7,16 +11,16 @@ body {
 
     grid-template-areas: 
         "mainObject"
-        "obj9"
-        "obj8"
-        "obj7"
+        "."
+        "."
+        "."
         "about"
-        "obj6"
-        "obj5"
-        "obj4"
-        "obj3"
-        "obj2"
-        "obj1"
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
         "footer"
     ;
 
@@ -76,7 +80,7 @@ p a {
     justify-self: stretch;
     align-self: stretch;
 
-    background-color: #0000004f;
+    background-color: var(--bgColor);
     text-align: center;
 
     background-size: cover;
@@ -91,6 +95,11 @@ p a {
     overflow-y: hidden;
 
     color: white;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.mainObject .sec {
+    text-shadow: 0px 0px 10px #000000;
 }
 .mainObject .sec h {
     margin: auto;
@@ -102,7 +111,7 @@ p a {
     margin: auto;
 }
 .mainObject p {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--bgColor);
     padding: 40px;
     margin: 0px;
     
@@ -131,11 +140,15 @@ p a {
     border-radius: 15px;
 
     height: 80vw;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 [class*="obj"] .sec {
     margin: 60px 0px;
     transition: transform 1s linear;
     transform: translateY(0%);
+
+    text-shadow: 0px 0px 10px #000000;
 }
 [class*="obj"] .sec h {
     margin: auto;
@@ -148,7 +161,7 @@ p a {
     width: 100%;
 }
 [class*="obj"] p {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--bgColor);
     padding: 2vh 0;
     margin: 0px;
     
@@ -200,7 +213,8 @@ p a {
 }
 
 .about {
-    padding: 20px 20px 20px 20px;
+    padding: 30px 30px 30px 30px;
+    margin: 10px 0;
     grid-area: about;
     justify-self: center;
 
@@ -210,12 +224,15 @@ p a {
 
     color: white;
     text-align: center;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 footer {
     margin-top: 30px;;
     grid-area: footer;
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--bgColor);
     color: white;
+    border-radius: 15px;
 }
