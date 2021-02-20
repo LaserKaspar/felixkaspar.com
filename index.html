@@ -1,142 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=500">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Die Protfolio Webseite von Felix Kaspar. Hier werden seine Spiele und Erfahrungen dokumentiert.">
-    <link rel="stylesheet" href="style.css?v=7">
-
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Roboto&display=swap" rel="stylesheet">
-    <title>Felix Kaspar</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
-
 <body>
-    <div class="mainObject" style="background-image: url(files/PadBanner_Small.png)" data-date="18.08.2019">
-        <div class="sec">
-            <h>Pad</h>
+    <header>
+        <div class="card">
+            <div class="title">
+                Felix <br>
+                Kaspar <br>
+                <a class="button cta" href="#projects">Projects</a>
+            </div>
+            <div class="introduction">
+                I think coding is fun.<br>
+                <br>
+                <img src="fun.svg" alt="">
+                <div class="icons">
+    
+                    <i class="fab fa-itch-io"></i>
+                    <i class="fab fa-unity"></i>
+                    <i class="fab fa-react"></i>
+                    <i class="fab fa-node-js"></i>
+                    <i class="fab fa-github"></i>
+                </div>
+            </div>
         </div>
-        <a class="sec" href="https://play.google.com/store/apps/details?id=com.LaserKaspar.Pad">
-            <p>
-                "Pad" ist ein entspannendes Spiel, in welchem du einen kleinen Kreis mit einem Schild spielst
-                und versuchen musst, Lasern, Rotorblättern, sich drehenden Plattformen und vielem mehr, auszuweichen.
-                Wenn du es testen willst klick auf dieses Fenster. Es befindet sich seit dem 18.08.2019 in der
-                Entwicklungsphase. Und ich hoffe, es bald releasen zu können.
-            </p>
-        </a>
-    </div>
-    <div class="objLD" style="background-image: url(files/itchio_Large.png)">
-        <div class="sec">
+    </header>
+    <hr>
+    <main>
+        <div class="container">
+            <h1>Projects</h1>
+            <h3>currently maintained projects</h3>
+            <section class="project">
+                <div class="logo">
+                    <img src="https://www.bionicsurface.com/wp-content/front/assets/images/logo-default.svg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Sample Project</h2>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                    <div class="buttons">
+                        <a class="button">Open <i class="fas fa-external-link-alt"></i></a>
+                        <a class="button">Download <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <h1>Games</h1>
+            <h3>a list of games I have made</h3>
+            <section class="project">
+                Sample Project
+            </section>
+        </div>
+        <div class="container">
+            <h1>Archive</h1>
+            <h3>work from the past</h3>
+            <div class="two-columns">
+                <section class="project">
+                    Sample Project
+                </section>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        <div>
 
         </div>
-        <a class="sec" href="https://laserkaspar.itch.io/">
-            <p>
-                Meine Gamejam Spiele.
-            </p>
-        </a>
-    </div>
-    <div class="obj" style="background-image: url(files/Juggle_Small.png)" data-date="07.01.2020">
-        <div class="sec">
-            <h>Juggle</h>
-        </div>
-        <a class="sec" href="game/juggle/juggle.zip">
-            <p>
-                Ein Chouchparty Spiel.
-            </p>
-        </a>
-    </div>
-    <div class="objRD" style="background-image: url(files/Burger_Small.png); background-size: contain;" data-date="22.10.2019">
-        <div class="sec">
-            <h>Burgers</h>
-        </div>
-        <a class="sec" href="game/burgers/index.html">
-            <p>
-                Dieses Spiel entstand wärend einer Unterrichtseinheit. <br>Click to play!
-            </p>
-        </a>
-    </div>
+        <div>
 
-    <div class="about">
-        <h1>Meine Erfahrungen</h1>
-        <p>
-            Hallo, ich bin Felix Kaspar, gehe seit zwei Jahren in die HTL Spengergasse in Wien und bin 16 Jahre alt.
-            Programmieren ist mittlerweile zu einem meiner größten Hobbies geworden. <br>
-            Auf dieser Webseite dokumentiere ich meine Reise zur Spielentwicklung.
-        </p>
-    </div>
+        </div>
+        <div>
 
-    <div class="objLU" style="background-image: url(files/Pts_Small.png)" data-date="06.09.2019">
-        <div class="sec">
-            <h>Protect The Sheeps</h>
         </div>
-        <a class="sec" href="game/pts/index.html">
-            <p>
-                Hilf dem Bauern seine Schafe zu schützen! <br>Click to play!
-            </p>
-        </a>
-    </div>
-
-    <div class="obj" style="background-image: url(files/Lid_Small.png)" data-date="30.05.2019">
-        <div class="sec">
-            <h>Light is dangerous</h>
-        </div>
-        <a class="sec" href="game/lid/lightisdangerous.zip">
-            <p>
-                Eine Mischung zwischen Puzzle und Plattformer! <br>Click to play!
-            </p>
-        </a>
-    </div>
-
-    <div class="objRU" style="background-image: url(files/Sheeps_Small.png)" data-date="02.04.2019">
-        <div class="sec">
-            <h>Sheeps?</h>
-        </div>
-        <a href="game/sheeps/sheeps.zip" class="sec">
-            <p>
-                Beschütze deinen Freund! <br>Click to download!
-            </p>
-        </a>
-    </div>
-    <div class="objLD" style="background-image: url(files/CubeRun_Small.png)" data-date="31.01.2019">
-        <div class="sec">
-            <h>CubeRun</h>
-        </div>
-        <a href="game/cuberun/cuberun.zip" class="sec">
-            <p>
-                Mein erstes Game in Unity. <br>Click to play!
-            </p>
-        </a>
-    </div>
-    <div class="obj" style="background-image: url(files/GoldRush_Small.png)" data-date="20.12.2018">
-        <div class="sec">
-            <h>GoldRush</h>
-        </div>
-        <a href="game/goldrush/GoldRush_v12.exe" class="sec">
-            <p>
-                Ein kleines Spiel in der Windows Console. Du musst in einem zufällig generiertem Labyrith Münzen
-                einsammeln.<br>Click to download!
-            </p>
-        </a>
-    </div>
-    <div class="objRD" style="background-image: url(files/SaveUrsula_Small.png)" data-date="10.11.2018">
-        <div class="sec">
-            <h>SaveUrsula</h>
-        </div>
-        <a href="game/saveursula/saveursula.zip" class="sec">
-            <p>
-                Editierbares Textbased Adventurgame in der Windows Console. <br>Click to download!
-            </p>
-        </a>
-    </div>
+    </footer>
 </body>
-<footer>
-    <u>Felix Kaspar</u><br>
-    E-Mail: <a style="text-decoration: none;"
-        href='mailto&#58;i%63h%&#52;0fel%69x%6&#66;a%7&#51;par&#46;&#99;o&#109;'>&#105;ch&#64;felixk&#97;s&#112;ar&#46;com</a>
-    <br>
-    Discord: LaserKaspar#3454<br>
-    <a href="impressum.html" style="text-decoration: none;">Impressum</a>
-</footer>
-
 </html>
