@@ -5,110 +5,478 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felix Kaspar</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="media/yellowfun.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="flyineffect.js"></script>
 </head>
 <body>
-    <div>
-        <div class="topbar container">
-            <a href="" class="logo">
-                <img src="Assets/logo/logo_darkblue.svg" alt="">
-                <div>
-                    Felix<br>Kaspar
-                </div>
-            </a>
-            <div class="nav">
-                <a href="">about</a>
-                <a href="">skills</a>
-                <a href="">projects</a>
+    <header>
+        <div class="card">
+            <div class="title">
+                Felix <br>
+                Kaspar <br>
             </div>
-        </div>
-        <div class="welcomemessage">
-            <div class="message">
-                Problem-solving is fun.<br>
-                Let's come up with <a href="">solutions</a>
-            </div>
-        </div>
-        <div class="fullsizebg">
-            <div class="presentation container">
-                <div class="card">
-                    <div class="card--timestamp">Mar. 2020</div>
-                    <div class="card--image"></div>
-                    <div class="card--container">
-                        <div class="card--heading">
-                            <div>
-                                Magnetic North
-                            </div>
-                        </div>
-                        <div class="card--content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum augue integer blandit a. Arcu volutpat pulvinar ipsum in enim. Nulla</div>
-                        <button href="" class="card--button">Read Further</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card--timestamp">Test Date</div>
-                    <div class="card--image"></div>
-                    <div class="card--container">
-                        <div class="card--heading">
-                            <div>
-                                Dosec
-                            </div>
-                        </div>
-                        <div class="card--content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum augue integer blandit a. Arcu volutpat pulvinar ipsum in enim. Nulla Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum augue integer blandit a. Arcu volutpat pulvinar ipsum in enim. Nulla</div>
-                        <button href="" class="card--button">Read Further</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card--timestamp">Test Date</div>
-                    <div class="card--image"></div>
-                    <div class="card--container">
-                        <div class="card--heading">
-                            <div>
-                                Keep Cooking
-                            </div>
-                        </div>
-                        <div class="card--content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum augue integer blandit a. Arcu volutpat pulvinar ipsum in enim. Nulla</div>
-                        <button href="" class="card--button">Read Further</button>
-                    </div>
+            <div class="introduction">
+                Problemsolving is fun.<br>
+                <br>
+                <img src="media/fun.svg" alt="">    
+                <div class="icons">
+    
+                    <i class="fab fa-itch-io"></i>
+                    <i class="fab fa-unity"></i>
+                    <i class="fab fa-node-js"></i>
+                    <i class="fab fa-github"></i>
                 </div>
             </div>
+            <a class="button cta" href="#projects">Projects</a>
         </div>
-        <div class="info">
-            <div class="container">
-                <div class="sections">
-                    <div class="section">
-                        <div class="section--heading">About Me</div>
-                        <div class="section--content">
-                            I am currently 18 years old and enjoy education at HTL spengerasse in Vienna. I love tinkering and problem-solving. 
-                            It’s hard for me to let go of an unsolved problem because I know there has to be a way to achieve it. If I have the chance to do something right I try my hardest to do so.
-                        </div>
-                    </div>
-                    <div class="section">
-                        <div class="section--heading">Skills</div>
-                        <div class="section--content">
-                            I always loved creating. Programming quickly became one of my greatest passions. Over the years I always stayed open to something new to broaden my horizon. 
-                            Making my first website in 2016, looked awful but I kept trying and improving my webdev skillset, studying gamedesign and learning something new wherever I stood at the time.
+    </header>
+    <main>
+        <hr id="projects">
+        <div class="container">
+            <h1>Active Projects</h1>
+            <h3>currently maintained projects</h3>
+            <section class="project">
+                <div class="logo round">
+                    <img src="media/keepcooking/logo.jpg" alt="">
+                </div>
+                <div class="text">
+                    <div class="date">Sep. 2021</div>
+                    <h2>Keep Cooking</h2>
+                    <div class="">A cooperative multiplayer VR-Game I am currently developing as a schoolproject with my college Ian Memic. One player is playing in the VR-Space and the other player is manipulation the world with the companion pc app.</div>
+                    <div class="buttons">
+                        <div class="buttons--group">
+                            <span>Demo</span><a class="button" href="media/keepcooking/VR_KeepCooking_2022.02.22.apk">Oculus Apk <i class="fas fa-vr-cardboard"></i></a><a class="button" href="media/keepcooking/PC_KeepCooking_2022.02.22.zip">PC-Companion <i class="fas fa-download"></i></a>
                         </div>
                     </div>
                 </div>
-                <img src="Assets/avatar/avatar.png" class="image"></img>
-            </div>
+            </section>
+            <section class="project">
+                <div class="logo round">
+                    <img src="media/magneticnorth/logo.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="date">Apr. 2021</div>
+                    <h2>Magnetic North</h2>
+                    <div class="">Magnetic North as a small exploration game. For this game I mainly focused on asthetics & polish. Give it a try, you can download it below.</div>
+                    <div class="buttons">
+                        <a class="button" href="media/magneticnorth/MagneticNorth_2021.06.16.zip">Direct <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="project">
+                <div class="logo">
+                    <img src="media/dosec/dosec-512.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="date">Dec. 2020</div>
+                    <h2>Dosec</h2>
+                    <div class="">This is currently version 3 of my todo-list. A small side-project of mine, I always try to improve it, if I find the time to do so.</div>
+                    <div class="buttons">
+                        <a class="button" href="https://laserkaspar.github.io/dosec">Visit <i class="fas fa-external-link-alt"></i></a>
+                        <a class="button" href="https://github.com/LaserKaspar/dosec">Source <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="project">
+                <div class="logo">
+                    <img src="media/pad/pad-512.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="date">Aug. 2019</div>
+                    <h2>Pad</h2>
+                    <div class="text-body-split">This is my first ever relased game. It is a casual mobile game. Not really much, but it has nice packaging (:</div>
+                    <div class="buttons">
+                        <a class="button" href="https://play.google.com/store/apps/details?id=com.LaserKaspar.Pad">Play Store <i class="fab fa-google-play"></i></a>
+                        <a class="button" href="media/pad/pad_v1.2.aab">Direct <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="section spacer">
-            <div class="projects container">
-                <div class="section--heading">Projects</div>
+        <hr id="about">
+        <div class="container">
+            <h1>About Me</h1>
+            <h3>fastest way to get to know me</h3>
+            <section class="project inverted">
+                <div class="logo">
+                    <img src="media/avatar.png" alt="">
+                </div>
+                <div class="text">
+                    <h2>This is me</h2>
+                    <div class="">I am currently 18 years old and enjoy education at HTL spengerasse in Vienna. I love tinkering and problem-solving. It’s hard for me to let go of an unsolved problem because I know there has to be a way to achieve it. If I have the chance to do something right I try my hardest to do so.</div>
+                    <div class="buttons">
+                        <a class="button" href="mailto:ich@felixkaspar.com">Contact <i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="project inverted">
+                <div class="text">
+                    <h2>Skills</h2>
+                    <div class="">I always loved creating. Programming quickly became one of my greatest passions. Over the years I always stayed open to something new to broaden my horizon. Making my first website in 2016, looked awful but I kept trying and improving my webdev skillset, studying gamedesign and learning something new wherever I stood at the time.</div>
+                    <div class="buttons">
+                        <a class="button" href="https://spengergasse.at">Spengergasse <i class="fas fa-graduation-cap"></i></i></a>
+                        <a class="button" href="https://github.com/LaserKaspar">Github <i class="fab fa-github"></i></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <hr id="games">
+        <div class="container">
+            <h1>Featured</h1>
+            <h3>a list of some mentionable milesones</h3>
+            <section class="project">
+                <div class="logo">
+                    <img src="media/itchio.svg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Game Jams</h2>
+                    <div class="text-body-split">You can find my Game-Jam games, as well as some other small games I made on my Itch.io page.</div>
+                    <div class="buttons">
+                        <a href="https://laserkaspar.itch.io/" class="button">Itch.io <i class="fab fa-itch-io"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="project">
+                <div class="logo">
+                    <img src="media/spacepiss/logo.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="date">Feb. 2022</div>
+                    <h2>SPG - GameJam 2022 - Space Piss</h2>
+                    <div class="">There it is, once again, the yearly spengergassen gamjam game. This time the theme was "You are the powersource." <br> This is Space Piss. You are as an alien energy drink supplier. You fill your cans with your high-energy sweat. Don't stop, or you'll store too much energy and die. Distribute your delicious drink in the whole neighborhood!</div>
+                    <div class="buttons">
+                        <a class="button" href="media/spacepiss/SpacePiss_Build.zip">Download <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </section>
 
-            </div>
+            <section class="project">
+                <div class="text">
+                    <h2>There are many more samples, currently not listed on my new website.</h2>
+                    <div class="">If you want to see more samples of my past work, you can visit my old website below. But I warn you she isn't a beauty.</div>
+                    <div class="buttons">
+                        <a class="button" href="https://felixkaspar.com/old">Visit <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </section>
 
+            
+            <!--
+            <section class="project">
+                <div class="logo">
+                    <img src="media/spengergasse.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="date">Jan. 2021</div>
+                    <h2>SPG - GameJam 2021</h2>
+                    <div class="text-body-split"> <a href="http://samuel.ellmauer.eu">Samuel Ellmauer</a>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr</div>
+                    <div class="buttons">
+                        <a class="button">Download <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="project">
+                <div class="logo">
+                    <img src="media/itchio.svg" alt="">
+                </div>
+                <div class="text">
+                    <div class="date">Jan. 2020</div>
+                    <h2>Party Game</h2>
+                    <div class="text-body-split">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr</div>
+                    <div class="buttons">
+                        <a class="button">Download <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section class="project">
+                <div class="logo">
+                    <img src="media/itchio.svg" alt="">
+                </div>
+                <div class="text">
+                    <div class="date">Dec. 2018</div>
+                    <h2>GoldRush</h2>
+                    <div class="text-body-split">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr</div>
+                    <div class="buttons">
+                        <a class="button">Download <i class="fas fa-download"></i></a>
+                    </div>
+                </div>
+            </section>
+            -->
         </div>
-        <div class="section">
-            <div class="skills container">
-                <div class="section--heading">Skills</div>
-
+        <!--
+            
+        <hr id="archive">
+        <div class="container">
+            <h1>Archive</h1>
+            <h3>work from the past</h3>
+            <div class="two-columns">
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Dec. 2020</div>
+                        <h2>Mind</h2>
+                        <div class="text-body-split-split">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Aug. 2020</div>
+                        <h2>Timer PWA</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Visit <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Jul. 2020</div>
+                        <h2>Shopping Frenzy</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">May 2020</div>
+                        <h2>Todolist V2</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Visit <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Mar. 2020</div>
+                        <h2>Weather the Storm</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Feb. 2020</div>
+                        <h2>Block It</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Jan. 2020</div>
+                        <h2>Labyrinth</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Jan. 2020</div>
+                        <h2>Color Grid</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Jan. 2020</div>
+                        <h2>Hug</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Visit <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Oct. 2019</div>
+                        <h2>Burgers</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Visit <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Apr. 2019</div>
+                        <h2>Sheeps</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">May 2019</div>
+                        <h2>Light is Dangerous</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Dec. 2019</div>
+                        <h2>Gravity</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Visit <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Nov. 2019</div>
+                        <h2>Ducktective - Web-Adventure</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Visit <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Nov. 2019</div>
+                        <h2>Hostile Turret</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Visit <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Sep. 2019</div>
+                        <h2>Sheeps</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Aug. 2019</div>
+                        <h2>Encryped Todolist</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Visit <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Jan. 2019</div>
+                        <h2>Cube Run</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="project">
+                    <div class="logo">
+                        <img src="media/itchio.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="date">Nov. 2018</div>
+                        <h2>Save Ursula</h2>
+                        <div class="text-body">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</div>
+                        <div class="buttons">
+                            <a class="button">Download <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </div>
+        -->
+    </main>
+    <footer>
+        <hr>
+        <div>
+            It may look like a uniform mishmash, but on closer inspection everything is something special.
+        </div>
+        <hr>
+        <div>
+            <a href="mailto:ich@felixkaspar.com">Contact</a> - Imprint -  <a href="https://spengergasse.at">Spengergasse</a> <br>
+            made with <i class="far fa-heart"></i> <a href=""">by Felix Kaspar</a>
+        </div>
+    </footer>
 </body>
 </html>
