@@ -1,0 +1,47 @@
+<div class="element">
+    <h2>Navigation</h2>
+    {{ range .Site.Menus.main }}
+        <i class="{{ .Pre }} fa-fw"></i>
+        <a href="{{ .URL }}">
+            {{ $text := print .Name | safeHTML }}
+            {{ $text }}
+        </a>
+        <br>
+    {{ end }}
+</div>
+
+<div class="element">
+    <h2>Location</h2>
+    <i class="fa-solid fa-earth-europe fa-fw"></i>
+    <a href="test">
+        Vienna, Austria
+    </a>
+</div>
+
+<div class="element">
+    <h2>Connect</h2>
+    <i class="fa-solid fa-envelope fa-fw"></i><a href="">E-Mail</a><br>
+    <i class="fa-brands fa-github fa-fw"></i><a href="">Github</a><br>
+    <i class="fa-brands fa-linkedin fa-fw"></i><a href="">LinkedIn</a><br>
+    <i class="fa-brands fa-slack fa-fw"></i><a href="">Slack</a><br>
+</div>
+
+<div class="element">
+    <h2>Recent</h2>
+
+    {{ range (where .Site.RegularPages.ByPublishDate.Reverse "Section" "in" (slice "kanban" "posts")) | first 5}}
+        {{ if eq .Section "kanban" }}
+        <i class="fa-solid fa-list-check fa-fw"></i>
+        {{ else if eq .Section "posts" }}
+        <i class="fa-solid fa-book fa-fw"></i>
+        {{ end }}
+        <a href="{{ .RelPermalink }}">
+            {{ if .Params.shortTitle }}
+                {{ .Params.shortTitle }}
+            {{ else }}
+                {{ .Title }}
+            {{ end }}
+        </a>
+        <br>
+    {{ end }}
+</div>

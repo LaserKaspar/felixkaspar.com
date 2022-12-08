@@ -1,0 +1,17 @@
+<!--Das wird immer gerendert-->
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        <div class="wrapper">
+            <div class="body">
+                {{- block "main" . }}{{- end }}
+                {{- partial "footer.html" . -}}
+            </div>
+            <div class="side">
+                {{- partial "side-nav.html" . -}}
+            </div>
+            {{- partial "script.html" . -}}
+        </div>
+    </body>
+</html>

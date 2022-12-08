@@ -1,0 +1,31 @@
+relativeURLs = true
+# baseURL = 'https://felixkaspar.com/new/'
+# canonifyurls = true
+
+languageCode = 'en-us'
+title = 'Felix Kaspar'
+theme = "theme"
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    pre = "fa-solid fa-id-card"
+    url = "/#"
+    weight = 1
+  [[menu.main]]
+    name = "Kanban"
+    pre = "fa-solid fa-list-check"
+    url = "/#kanban"
+    weight = 2
+  [[menu.main]]
+    name = "Blog"
+    pre = "fa-solid fa-book"
+    url = "/#blog"
+    weight = 3
+
+[taxonomies]
+    kanban = 'kanban'
+    tag = 'tags'
