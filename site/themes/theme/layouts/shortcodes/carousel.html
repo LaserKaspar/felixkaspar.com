@@ -1,0 +1,6 @@
+<hr>
+<div class="carousel" data-flickity='{{ if eq (.Get 0) "wrap" }}{ "wrapAround": "true" }{{ end }}'>
+    {{ .Inner | markdownify}}
+</div>
+<hr>
+<br>

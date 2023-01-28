@@ -1,14 +1,11 @@
 ---
 title: "Felix Kaspar"
-background: ""
-avatar: ""
 sub: "Programming / Game Design · Student at HTL Spengergasse"
 location: "Vienna, Austria"
 tags: ["Programming", "GameDev", "UI / UX", "Webdev", "3D" ]
-draft: false
 hero: "images/Avatar_Icon_1k.png"
+draft: false
 ---
-
 
 Hi, my name is Felix Kaspar,
 
@@ -17,6 +14,10 @@ If I have the chance to do something right I’ll try my hardest to do so.
 
 <!--more-->
 
-{{< button "https://example.com" >}}
+{{< button "/cv/Lebenslauf_2023.pdf" >}}
 CV / Read More <i class="fa-solid fa-angle-right"></i>
+{{< /button >}}
+
+{{< button "/full-project-timeline/" >}}
+Project Timeline <i class="fa-solid fa-angle-right"></i>
 {{< /button >}}

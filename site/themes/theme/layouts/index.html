@@ -22,18 +22,21 @@
 
 {{- partial "inline-nav.html" . -}}
 
-<div class="element margin">
+
+<!-- about -->
+<div class="element margin" id="about">
     <h2>About Me</h2>
     {{ .Content }}
 </div>
 
 <hr>
 
-<div class="padding-y scroll-viewport">
+<!-- kanban -->
+<div class="padding-y scroll-viewport" id="kanban">
     <div class="scroll-content">
         {{ $Context := . }}
-        {{ range $Status := slice "Todo" "Doing" "Done" "Archive" }}
-            <div class="container small-padding">
+        {{ range $Status := slice "Doing" "Done" "Archive" }}
+            <div class="container small-padding {{lower $Status}}">
                 <h2>{{.}}</h2>
                 {{ range (where $Context.Site.Pages "Section" "kanban") }}
                     {{ range (where .Pages "Params.status" $Status) }}
@@ -42,16 +45,18 @@
                                 <h3>
                                     {{ .Title }}   
                                 </h3>
-                                <div class="small-button-container">
-                                    {{ with .Params.tags }}
-                                        {{ range . }}
-                                            {{ $href := print (absURL "tags/") (urlize .) }}
-                                            <div class="tag-button">
-                                                {{ . }}
-                                            </div>
+                                {{ if .Params.tags }}
+                                    <div class="small-button-container">
+                                        {{ with .Params.tags }}
+                                            {{ range . }}
+                                                {{ $href := print (absURL "tags/") (urlize .) }}
+                                                <div class="tag-button">
+                                                    {{ . }}
+                                                </div>
+                                            {{ end }}
                                         {{ end }}
-                                    {{ end }}
-                                </div>
+                                    </div>
+                                {{ end }}
                                 {{ if .Params.hero }}
                                     <div class="zooming borderradius-small margin-top-small">
                                         {{ with .Resources.GetMatch .Params.hero }}
@@ -71,7 +76,8 @@
 
 <hr>
 
-<div class="container small-padding margin">
+<!-- display blog posts -->
+<div class="container small-padding margin" id="blog">
     <h2>Blog</h2>
     {{ range (where .Site.Pages "Section" "posts") }}
         {{ range .Pages }}
@@ -84,17 +90,19 @@
                     {{ end }}
                 </div>
                 <div class="padding">
-                    <div class="medium-button-container">
-                        {{ with .Params.tags }}
-                            {{ range . }}
-                                {{ $href := print (absURL "tags/") (urlize .) }}
-                                <div class="tag-button">
-                                    {{ . }}
-                                </div>
+                    {{ if .Params.tags }}
+                        <div class="medium-button-container">
+                            {{ with .Params.tags }}
+                                {{ range . }}
+                                    {{ $href := print (absURL "tags/") (urlize .) }}
+                                    <div class="tag-button">
+                                        {{ . }}
+                                    </div>
+                                {{ end }}
                             {{ end }}
-                        {{ end }}
-                    </div>
-                    <br>
+                        </div>
+                        <br>
+                    {{ end }}
                     <h3>{{ .Title }}</h3>
                     {{ .Date.Format "2 Jan 2006" }} - {{ math.Round (div (countwords .Content) 220.0) }} min to read
                     <br>

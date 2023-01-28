@@ -13,7 +13,7 @@ unsafe= true
   [[menu.main]]
     name = "About"
     pre = "fa-solid fa-id-card"
-    url = "/#"
+    url = "/#about"
     weight = 1
   [[menu.main]]
     name = "Kanban"

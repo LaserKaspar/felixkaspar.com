@@ -2,6 +2,9 @@ body {
     background-color: #F6F6F6;
     font-family: 'Noto Sans', sans-serif;
     margin: 0;
+
+    
+    line-height: 1.5;
 }
 
 h1 {
@@ -28,6 +31,7 @@ h3 {
     margin-top: 5px;
     color: #343051;
     font-size: 1em;
+    position: relative;
 }
 
 hr {
@@ -43,6 +47,7 @@ i {
 }
 
 a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     color: inherit;
     text-decoration: none;
 }
@@ -84,6 +89,14 @@ a.blank:hover {
 
 .borderradius-small {
     border-radius: 10px;
+}
+
+.borderradius {
+    border-radius: 20px;
+}
+
+.borderradius-left {
+    border-radius: 20px 0 0 20px;
 }
 
 .hero-background {
@@ -205,6 +218,7 @@ a.blank:hover {
     padding-right: 20px;
     width: max-content;
     cursor: move;
+    margin: auto;
 }
 
 .scroll-content > .container {
@@ -225,7 +239,12 @@ a.blank:hover {
     padding: 20px;
     height: fit-content;
     overflow: hidden;
-    position: relative;
+    position: relative;   
+}
+
+.element hr {
+    width: 100%;
+    margin: 0px;
 }
 
 .sub-element {
@@ -262,6 +281,7 @@ a.blank:hover {
 }
 
 .zooming {
+    will-change: transform;
     overflow: hidden;
 }
 
@@ -385,11 +405,26 @@ a.blank:hover {
     margin-right: 10px;
 }
 
+/* kanban */
+
+.archive h3 {
+    color: gray;
+}
+
+
 .preview-image {
-    width: 100%;
-    height: auto;
     overflow: hidden;
     max-height: 250px;
+    border-radius: 20px 20px 0 0;
+}
+
+@media screen and (min-width: 750px)  {
+    .preview-image {
+        border-radius: 20px 0 0 20px;
+        max-height: initial;
+        width: 30%;
+        flex-shrink: 0;
+    }
 }
 
 .preview-image img {
@@ -397,8 +432,6 @@ a.blank:hover {
     height: 100%;
     object-fit: cover;
 }
-
-
 
 @media screen and (max-width: 1200px) { 
     .blog {
@@ -421,6 +454,10 @@ a.blank:hover {
     margin-bottom: 15px;
 }
 
+.blog img {
+    border-radius: 10px;
+}
+
 .back-arrow {
     display: block;
     width: 2em;
@@ -438,4 +475,37 @@ a.blank:hover {
     .blog-title {
         text-align: center;
     }
+}
+
+
+/* carousel */
+
+.carousel {
+    margin: 20px 0px 40px 0px;
+}
+@media screen and (min-width: 750px) { 
+    .carousel img {
+        height: 270px;
+        max-width: 480px;
+    }
+}
+
+.carousel img {
+    width: calc(100% - 10px);
+    aspect-ratio: 16 / 9;
+    background-color: rgb(248, 248, 248);
+    margin: 10px;
+    border-radius: 10px;
+    outline: dashed 1px lightgray;
+}
+
+.flickity-button {
+    position: absolute;
+    background: none !important;
+    border: none;
+    color: #333;
+}
+
+.flickity-button:focus {
+    box-shadow: none !important;
 }

@@ -1,0 +1,164 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #333; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(202, 202, 202); 
+}
+
+.fullscreen-viewport {
+    width: 100%;
+    height: 100%;
+}
+
+.timesheet {
+    height: 100%;
+    position: relative;
+    overflow-x: scroll;
+}
+
+.timesheet.color-scheme-default .bubble-default {
+    background-color: white
+}
+
+.timesheet.color-scheme-default .bubble-green {
+    background-color: #231F20;
+}
+
+.timesheet.color-scheme-default .bubble-blue {
+    background-color: #BB4430;
+}
+
+.timesheet.color-scheme-default .bubble-red {
+    background-color: #7EBDC2;
+}
+
+.timesheet.color-scheme-default .bubble-orange {
+    background-color: #F3DFA2;
+}
+
+.timesheet .scale {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: left;
+    width: max-content;
+    position: sticky;
+}
+
+.timesheet .scale section {
+    float: left;
+    width: 600px;
+    text-align: center;
+    color: rgba(250, 250, 250, 0.8);
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: lighter;
+    border-left: 1px dashed rgba(250, 250, 250, 0.2);
+    height: 100%
+}
+
+.timesheet .data {
+    padding: 35px 0 70px 0;
+    text-align: left;
+    list-style-type: none;
+    color: rgba(250, 250, 250, 0.8);
+    font-size: 13px;
+    position: absolute;
+}
+
+.timesheet .data li {
+    line-height: 22px;
+    height: 21px;
+    display: block;
+    clear: both;
+    position: relative;
+    white-space: nowrap;
+    opacity: 0.7;
+}
+
+.timesheet .data li:hover {
+    opacity: 1;
+}
+
+.timesheet .data li .date {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #979796;
+}
+
+.timesheet .data li .label {
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 21px;
+    white-space: nowrap;
+    color: #b5b5b5;
+}
+
+.timesheet .data li .bubble {
+    width: 24px;
+    height: 7px;
+    display: block;
+    float: left;
+    position: relative;
+    top: 7px;
+    margin: 0 5px 0 0;
+    border-radius: 3px 0px 0px 3px;
+    min-width: 3px;
+}
+
+#timesheet-alternative {
+    background-color: RGBA(247, 247, 247, 1);
+    border-radius: 5px
+}
+
+#timesheet-alternative section {
+    color: RGBA(63, 68, 72, 1);
+    border-left: 1px dashed RGBA(63, 68, 72, 0.2)
+}
+
+#timesheet-alternative section:first-child {
+    border-left: 1px dashed transparent
+}
+
+#timesheet-alternative .date {
+    display: none
+}
+
+#timesheet-alternative .bubble {
+    margin-right: 7px
+}
+
+#timesheet-alternative .label {
+    padding-left: 0px;
+    color: RGBA(48, 48, 48, 1)
+}
+
+/*# sourceMappingURL=timesheet.min.css.map */

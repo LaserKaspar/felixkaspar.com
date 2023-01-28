@@ -6,4 +6,7 @@ tags: ["VR", "Multiplayer"]
 status: "Doing"
 hero: "hero.png"
 ---
-Test Element
+
+Tricks 'N' Treats is an "assymetrical local-multiplayer couchparty-coop vs vr"-game meaning it can be played cooperatively by 1-4 people on a couch/one monitor against one player in VR.
+
+![](hero.png)
