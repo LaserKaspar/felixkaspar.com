@@ -2,6 +2,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +12,22 @@
 
     <link rel="stylesheet" href="/css/flickity.min.css" media="screen">
     <script src="/js/flickity.pkgd.min.js"></script>
+
+    <script>
+        function back() {
+            var useFallback = true;
+
+            window.addEventListener("beforeunload", function(){
+                useFallback = false;
+            });
+
+            window.history.back();
+
+            setTimeout(function(){
+                if (useFallback){ window.location.href = "/"; }
+            }, 100);
+        }
+    </script>
 
     {{ $title := print .Site.Title " | " .Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}

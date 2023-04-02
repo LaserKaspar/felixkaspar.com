@@ -16,7 +16,7 @@
             {{ .Params.location }}
         </div>
         <div>{{ partial "tags.html" . }}</div>
-        <a href=""><div class="cta-button"><i class="fa-solid fa-paper-plane"></i> Send Message</div></a>
+        <a href="{{ .Params.contact }}"><div class="cta-button"><i class="fa-solid fa-paper-plane"></i> Send Message</div></a>
     </div>
 </div>
 
@@ -31,48 +31,46 @@
 
 <hr>
 
-<!-- kanban -->
-<div class="padding-y scroll-viewport" id="kanban">
-    <div class="scroll-content">
-        {{ $Context := . }}
-        {{ range $Status := slice "Doing" "Done" "Archive" }}
-            <div class="container small-padding {{lower $Status}}">
-                <h2>{{.}}</h2>
-                {{ range (where $Context.Site.Pages "Section" "kanban") }}
-                    {{ range (where .Pages "Params.status" $Status) }}
-                        <a href="{{ .RelPermalink }}" draggable="false" class="blank">
-                            <div class="sub-element small-padding margin-top-small zoom-parent">
-                                <h3>
-                                    {{ .Title }}   
-                                </h3>
-                                {{ if .Params.tags }}
-                                    <div class="small-button-container">
-                                        {{ with .Params.tags }}
-                                            {{ range . }}
-                                                {{ $href := print (absURL "tags/") (urlize .) }}
-                                                <div class="tag-button">
-                                                    {{ . }}
-                                                </div>
-                                            {{ end }}
-                                        {{ end }}
+<!-- projects -->
+<div class="container small-padding margin" id="projects">
+    <h2>Projects</h2>
+    {{ $Context := . }}
+    <div class="project-display margin-top-small">
+        {{ range where (where $Context.Site.Pages "Section" "projects") "Params.ondisplay" true }}
+            <a href="{{ .RelPermalink }}" draggable="false" class="blank">
+                <div class="sub-element small-padding zoom-parent project">
+                    <h3>
+                        {{ .Title }}
+                    </h3>
+                    {{ if .Params.tags }}
+                        <div class="small-button-container">
+                            {{ with .Params.tags }}
+                                {{ range . }}
+                                    {{ $href := print (absURL "tags/") (urlize .) }}
+                                    <div class="tag-button">
+                                        {{ . }}
                                     </div>
                                 {{ end }}
-                                {{ if .Params.hero }}
-                                    <div class="zooming borderradius-small margin-top-small">
-                                        {{ with .Resources.GetMatch .Params.hero }}
-                                            {{ $image := .Resize "600x jpg" }}
-                                            <img src="{{ $image.RelPermalink }}" draggable="false">
-                                        {{ end }}
-                                    </div>
-                                {{ end }}
-                            </div>
-                        </a>
+                            {{ end }}
+                        </div>
                     {{ end }}
-                {{ end }}
-            </div>
+                    {{ if .Params.hero }}
+                        <div class="zooming borderradius-small margin-y-small">
+                            {{ with .Resources.GetMatch .Params.hero }}
+                                {{ $image := .Resize "600x jpg" }}
+                                <img src="{{ $image.RelPermalink }}" draggable="false">
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ .Summary }}
+                </div>
+            </a>
         {{ end }}
     </div>
+    <a class="blank" href="/projects"><div class="more-projects-button margin-top-small">See more Projects!</div></a>
 </div>
+
+<!--TODO: More projects button-->
 
 <hr>
 
@@ -90,6 +88,8 @@
                     {{ end }}
                 </div>
                 <div class="padding">
+                    <h3>{{ .Title }}</h3>
+                    {{ .Date.Format "2 Jan 2006" }} - {{ math.Round (div (countwords .Content) 220.0) }} min to read
                     {{ if .Params.tags }}
                         <div class="medium-button-container">
                             {{ with .Params.tags }}
@@ -101,11 +101,7 @@
                                 {{ end }}
                             {{ end }}
                         </div>
-                        <br>
                     {{ end }}
-                    <h3>{{ .Title }}</h3>
-                    {{ .Date.Format "2 Jan 2006" }} - {{ math.Round (div (countwords .Content) 220.0) }} min to read
-                    <br>
                     <br>
                     {{ .Summary }}
                 </div>

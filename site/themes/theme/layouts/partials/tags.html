@@ -2,7 +2,7 @@
     {{ range . }}
         {{ $href := print (absURL "tags/") (urlize .) }}
         <div class="tag-button">
-            <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
+            <!--<a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">-->{{ . }}<!--</a>-->
         </div>
     {{ end }}
 {{ end }}

@@ -1,0 +1,87 @@
+{{ define "main" }}
+    <div class="blog-title">
+        <a class="back-arrow" href="/" onclick="history.back();return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        </a>
+        <h1>{{ .Title }}</h1>
+    </div>
+    <!-- <div class="padding-y scroll-viewport" id="projects">
+        <div class="scroll-content">
+            {{ $Context := . }}
+            {{ range $Status := slice "Doing" "Done" "Archive" }}
+                <div class="container small-padding {{lower $Status}}">
+                    <h2>{{.}}</h2>
+                    {{ range (where $Context.Site.Pages "Section" "projects") }}
+                        {{ range (where .Pages "Params.status" $Status) }}
+                            <a href="{{ .RelPermalink }}" draggable="false" class="blank">
+                                <div class="sub-element small-padding margin-top-small zoom-parent">
+                                    <h3>
+                                        {{ .Title }}
+                                    </h3>
+                                    {{ if .Params.tags }}
+                                        <div class="small-button-container">
+                                            {{ with .Params.tags }}
+                                                {{ range . }}
+                                                    {{ $href := print (absURL "tags/") (urlize .) }}
+                                                    <div class="tag-button">
+                                                        {{ . }}
+                                                    </div>
+                                                {{ end }}
+                                            {{ end }}
+                                        </div>
+                                    {{ end }}
+                                    {{ if .Params.hero }}
+                                        <div class="zooming borderradius-small margin-top-small">
+                                            {{ with .Resources.GetMatch .Params.hero }}
+                                                {{ $image := .Resize "600x jpg" }}
+                                                <img src="{{ $image.RelPermalink }}" draggable="false">
+                                            {{ end }}
+                                        </div>
+                                    {{ end }}
+                                </div>
+                            </a>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </div> -->
+
+    {{ range $Status := slice "Doing" "Done" "Archive" }}
+        <div class="container small-padding {{lower $Status}} margin">
+            <h2>{{.}}</h2>
+            <div class="carousel div-carousel" data-flickity='{ "adaptiveHeight": true, "imagesLoaded": true }'>
+                {{ range (where $Context.Site.Pages "Section" "projects") }}
+                    {{ range (where .Pages "Params.status" $Status) }}
+                            <div class="carousel-item sub-element small-padding margin-top-small zoom-parent">
+                                <h3>
+                                    {{ .Title }}
+                                </h3>
+                                {{ if .Params.tags }}
+                                    <div class="small-button-container">
+                                        {{ with .Params.tags }}
+                                            {{ range . }}
+                                                {{ $href := print (absURL "tags/") (urlize .) }}
+                                                <div class="tag-button">
+                                                    {{ . }}
+                                                </div>
+                                            {{ end }}
+                                        {{ end }}
+                                    </div>
+                                {{ end }}
+                                {{ if .Params.hero }}
+                                    <div class="zooming borderradius-small margin-top-small">
+                                        {{ with .Resources.GetMatch .Params.hero }}
+                                            {{ $image := .Resize "600x jpg" }}
+                                            <img src="{{ $image.RelPermalink }}" draggable="false">
+                                        {{ end }}
+                                    </div>
+                                {{ end }}
+                            </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+
+{{ end }}

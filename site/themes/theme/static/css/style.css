@@ -38,8 +38,9 @@ hr {
     background-color: #D9D9D9;
     border: 0;
     width: calc(100% - 40px);
-    height: 2.5px;
     margin: 0px 20px;
+    
+    border-top: 2.5px solid #D9D9D9;
 }
 
 i {
@@ -54,6 +55,41 @@ a {
 
 img {
     background-color: #23272a;
+    margin: auto;
+    display: block;
+    object-fit: cover;
+}
+
+video {
+    background-color: #23272a;
+    margin: auto;
+    display: block;
+}
+
+@media screen and (min-width: 750px) { 
+    img {
+        width: 50%;
+    }
+    video {
+        width: 50%;
+    }
+    .fullsize img {
+        width: 100%;
+    }
+    .fullsize video {
+        width: 100%;
+    }
+}
+
+.dual {
+    display: flex;
+}
+
+.dual img {
+    width: 100%;
+}
+
+.dual video {
     width: 100%;
 }
 
@@ -63,6 +99,27 @@ a:hover {
 
 a.blank:hover {
     text-decoration: none;
+}
+
+code {
+    color: #555;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid #F6F6F6;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #F6F6F6;
 }
 
 .block {
@@ -77,9 +134,18 @@ a.blank:hover {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.margin-y-small {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 .margin-top-small {
     margin-top: 10px;
+}
+
+.margin-bottom-small {
+    margin-bottom: 10px;
 }
 
 .margin-x {
@@ -140,7 +206,7 @@ a.blank:hover {
 
 .hero-info .info {
     line-height: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .wrapper {
@@ -226,7 +292,7 @@ a.blank:hover {
     margin-left: 20px;
     width: 260px;
     vertical-align:top;
-    height: 400px;
+    /* height: 400px; */
     overflow-y: auto;
     position: relative;
     user-select: none; /* Standard syntax */
@@ -287,6 +353,7 @@ a.blank:hover {
 
 .zoom-parent .zooming img {
     transition: transform .3s ease;
+    width: 100%;
 }
 
 .zoom-parent:hover .zooming img {
@@ -323,6 +390,10 @@ a.blank:hover {
     text-align: center;
 }
 
+.center-block {
+    margin: auto;
+}
+
 .flex {
     display: flex;
 }
@@ -352,7 +423,7 @@ a.blank:hover {
     margin-top: 5px;
 }
 .small-button-container .tag-button {
-    padding: 1px 5px;
+    padding: 1px 7px;
     border-radius: 6px;
     background-color: #D9D9D9;
     color: black;
@@ -379,12 +450,18 @@ a.blank:hover {
 }
 
 .cta-button {
-    padding: 7px 25px;
+    padding: 5px 23px;
     border-radius: 10px;
     background-color: #2F4858;
+    border: 3px solid #2F4858;
     color: white;
     display: inline-block;
     margin-top: 20px;
+    transition-duration: 100ms;
+}
+.cta-button:hover {
+    background-color: initial;
+    color: #2F4858;
 }
 
 @media screen and (min-width: 750px) { 
@@ -396,19 +473,68 @@ a.blank:hover {
 }
 
 .action-button {
-    padding: 5px 15px;
+    padding: 2px 13px;
     border-radius: 10px;
     background-color: #2F4858;
+    border: 3px solid #2F4858;
     color: white;
     display: inline-block;
     margin-top: 10px;
     margin-right: 10px;
+    transition-duration: 150ms;
+}
+
+.action-button:hover {
+    background-color: initial;
+    color: #2F4858;
+}
+
+.more-projects-button {
+    padding: 2px 13px;
+    border-radius: 10px;
+    background-color: #2F4858;
+    border: 3px solid #2F4858;
+    color: white;
+    transition-duration: 150ms;
+    text-align: center;
+}
+
+.more-projects-button:hover {
+    background-color: initial;
+    color: #2F4858;
+}
+
+.horizontal-buttongroup {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 750px) { 
+    .horizontal-buttongroup {
+        flex-direction: row;
+    }
+}
+
+.horizontal-buttongroup a {
+    flex-grow: 1;
+}
+
+.horizontal-buttongroup .action-button {
+    margin: 0px;
+    text-align: center;
+    width: -webkit-fill-available;
 }
 
 /* kanban */
 
 .archive h3 {
     color: gray;
+}
+
+.archive .sub-element:hover h3 {
+    color: rgb(214, 112, 112);
 }
 
 
@@ -461,6 +587,7 @@ a.blank:hover {
 .back-arrow {
     display: block;
     width: 2em;
+    top: 25px;
 }
 
 @media screen and (min-width: 750px) { 
@@ -483,20 +610,39 @@ a.blank:hover {
 .carousel {
     margin: 20px 0px 40px 0px;
 }
-@media screen and (min-width: 750px) { 
-    .carousel img {
-        height: 270px;
-        max-width: 480px;
-    }
-}
 
-.carousel img {
+.img-carousel img {
     width: calc(100% - 10px);
     aspect-ratio: 16 / 9;
     background-color: rgb(248, 248, 248);
     margin: 10px;
     border-radius: 10px;
     outline: dashed 1px lightgray;
+}
+@media screen and (min-width: 750px) { 
+    .img-carousel img {
+        height: 270px;
+        max-width: 480px;
+    }
+}
+
+.div-carousel > a {
+    display: block;
+}
+
+.div-carousel .carousel-item {
+    width: calc(100% - 40px);
+    background-color: rgb(248, 248, 248);
+    margin: 10px;
+    border-radius: 10px;
+    outline: dashed 1px lightgray;
+    text-align: center;
+}
+
+@media screen and (min-width: 750px) { 
+    .div-carousel .carousel-item {
+        max-width: 300px;
+    }
 }
 
 .flickity-button {
@@ -508,4 +654,33 @@ a.blank:hover {
 
 .flickity-button:focus {
     box-shadow: none !important;
+}
+
+.flickity-viewport {
+    transition: height 0.2s;
+}
+
+.project-display {
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 750px) { 
+    .project-display {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+.project-display > * {
+    flex: 1;
+}
+.project img {
+    width: 100%;
+    display: block;
+}
+
+.project p {
+    margin: 0;
 }

@@ -2,15 +2,15 @@
 title: "Felix Kaspar"
 sub: "Programming / Game Design · Student at HTL Spengergasse"
 location: "Vienna, Austria"
-tags: ["Programming", "GameDev", "UI / UX", "Webdev", "3D" ]
+tags: ["Programming", "GameDev", "UI / UX", "WebDev", "3D" ]
 hero: "images/Avatar_Icon_1k.png"
+contact: "mailto:ich@felixkaspar.com"
 draft: false
 ---
 
-Hi, my name is Felix Kaspar,
-
-I am currently enjoying an education at HTL Spengerasse in Vienna, I love tinkering and problem-solving. It’s hard for me to let go of an unsolved problem because I know there has to be a way to achieve what I have in mind.  
-If I have the chance to do something right I’ll try my hardest to do so.
+Hi,  
+my name is Felix Kaspar,  
+I am currently enjoying an education at HTL Spengerasse in Vienna. I love tinkering and problem-solving, naturally programming became one of my biggest passions. You can find some of my work and my blog below.
 
 <!--more-->
 
