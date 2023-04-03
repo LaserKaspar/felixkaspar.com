@@ -36,7 +36,7 @@
     <h2>Projects</h2>
     {{ $Context := . }}
     <div class="project-display margin-top-small">
-        {{ range where (where $Context.Site.Pages "Section" "projects") "Params.ondisplay" true }}
+        {{ range (where (where $Context.Site.Pages "Section" "projects") "Params.ondisplay" true).ByDate}}
             <a href="{{ .RelPermalink }}" draggable="false" class="blank">
                 <div class="sub-element small-padding zoom-parent project">
                     <h3>
