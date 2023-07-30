@@ -1,0 +1,2 @@
+Disallow: /old/*
+Disallow: /new/*

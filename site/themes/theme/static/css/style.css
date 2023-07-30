@@ -58,12 +58,17 @@ img {
     margin: auto;
     display: block;
     object-fit: cover;
+    
+    width: 100%;
+    height: auto;
 }
 
 video {
     background-color: #23272a;
     margin: auto;
     display: block;
+
+    width: 100%;
 }
 
 @media screen and (min-width: 750px) { 
@@ -521,6 +526,10 @@ tr:nth-child(even) {
     flex-grow: 1;
 }
 
+.horizontal-buttongroup div {
+    width: -moz-available;
+}
+
 .horizontal-buttongroup .action-button {
     margin: 0px;
     text-align: center;
@@ -541,12 +550,12 @@ tr:nth-child(even) {
 .preview-image {
     overflow: hidden;
     max-height: 250px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 
 @media screen and (min-width: 750px)  {
     .preview-image {
-        border-radius: 20px 0 0 20px;
+        border-radius: 10px 0 0 10px;
         max-height: initial;
         width: 30%;
         flex-shrink: 0;

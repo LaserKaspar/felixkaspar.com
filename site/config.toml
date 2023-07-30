@@ -4,7 +4,7 @@ relativeURLs = true
 
 languageCode = 'en-us'
 title = 'Felix Kaspar'
-theme = "theme"
+theme = ["theme"]
 
 [markup.goldmark.renderer]
 unsafe = true

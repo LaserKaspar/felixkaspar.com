@@ -80,7 +80,7 @@
     {{ range (where .Site.Pages "Section" "posts") }}
         {{ range .Pages }}
         <a href="{{ .RelPermalink }}" class="blank">
-            <div class="element margin-top-small no-padding flex flex-flow-swap zoom-parent">
+            <div class="sub-element margin-top-small no-padding flex flex-flow-swap zoom-parent">
                 <div class="preview-image zooming">
                     {{ with .Resources.GetMatch .Params.hero }}
                         {{ $image := .Resize "x600 jpg" }}

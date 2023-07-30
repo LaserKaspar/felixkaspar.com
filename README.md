@@ -12,3 +12,8 @@ https://gohugo.io/getting-started/usage/#draft-future-and-expired-content
 Start Hugo Server
 > hugo server -D
 > hugo server -D --bind 0.0.0.0
+
+Used Hugo-Extended for support of webp
+
+Update Hugo
+> choco upgrade hugo-extended
