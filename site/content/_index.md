@@ -2,6 +2,7 @@
 title: "Felix Kaspar"
 sub: "Programming / Game Design · Student at HTL Spengergasse"
 location: "Vienna, Austria"
+locationurl: "https://goo.gl/maps/HKZMXG8WMpja5GLL8"
 tags: ["Programming", "GameDev", "UI / UX", "WebDev", "3D" ]
 hero: "images/Avatar_Icon_1k.png"
 contact: "mailto:ich@felixkaspar.com"

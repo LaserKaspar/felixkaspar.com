@@ -5,7 +5,7 @@
         <div class="hero-avatar">
             {{ with resources.Get .Params.hero }}
                 {{ $image := .Resize "600x jpg" }}
-                <img src="{{ $image.RelPermalink }}" draggable="false">
+                <img src="{{ $image.RelPermalink }}" draggable="false" alt="Avatar">
             {{ end }}
         </div>
     </div>
@@ -13,7 +13,7 @@
         <h1>{{ .Title }}</h1>
         <div class="info">
             {{ .Params.sub }} <br>
-            {{ .Params.location }}
+            <a target="_blank" href="{{ .Params.locationurl }}">{{ .Params.location }}</a>
         </div>
         <div>{{ partial "tags.html" . }}</div>
         <a href="{{ .Params.contact }}"><div class="cta-button"><i class="fa-solid fa-paper-plane"></i> Send Message</div></a>
@@ -58,7 +58,7 @@
                         <div class="zooming borderradius-small margin-y-small">
                             {{ with .Resources.GetMatch .Params.hero }}
                                 {{ $image := .Resize "600x jpg" }}
-                                <img src="{{ $image.RelPermalink }}" draggable="false">
+                                <img src="{{ $image.RelPermalink }}" draggable="false" alt="{{ .Title }}">
                             {{ end }}
                         </div>
                     {{ end }}
@@ -84,7 +84,7 @@
                 <div class="preview-image zooming">
                     {{ with .Resources.GetMatch .Params.hero }}
                         {{ $image := .Resize "x600 jpg" }}
-                        <img src="{{ $image.RelPermalink }}" draggable="false">
+                        <img src="{{ $image.RelPermalink }}" draggable="false" alt="{{ .Title }}">
                     {{ end }}
                 </div>
                 <div class="padding">
