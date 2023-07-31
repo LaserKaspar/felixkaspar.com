@@ -35,9 +35,9 @@ Clearly it would be optimal if all teachers in a school agree to only use one pl
 Once a user opens the website they are asked to login using their account provided by our school. After the initial login they are able to add the services they want to see (choosing between MS-Teams, Moodle, Game and Untis) to their page and once this is set up, every time they go on the website (and are still logged in), they are welcomed with an up to date version of their assignments.
 
 {{< carousel >}}
-[![](images/login.png)](images/login.png)
-[![](images/layout.png)](images/layout.png)
-[![](images/setup.png)](images/setup.png)
+[![Login flickety](images/login.png)](images/login.png)
+[![Layout flickety](images/layout.png)](images/layout.png)
+[![Setup flickety](images/setup.png)](images/setup.png)
 {{< /carousel >}}
 
 ## ⛔ Background

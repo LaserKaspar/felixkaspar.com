@@ -24,12 +24,12 @@ Ars Electronica <i class="fa-solid fa-trophy"></i>
 Tricks 'N' Treats is an "assymetrical local-multiplayer couchparty-coop vs. vr"-game, meaning it can be played cooperatively by 1-4 people on a couch/one monitor against one player in VR. This site is currently only available in german.
 
 {{< carousel >}}
-[![](hero.png)](hero.png)
-[![](images/character-selection.png)](images/character-selection.png)
-[![](images/pc-ingame-screenshot.png)](images/pc-ingame-screenshot.png)
-[![](images/vr-ingame-screenshot.png)](images/vr-ingame-screenshot.png)
-[![](images/vr-ingame-screenshot-2.png)](images/vr-ingame-screenshot-2.png)
-[![](images/mage-artwork.png)](images/mage-artwork.png)
+[![flickety](hero.png)](hero.png)
+[![flickety](images/character-selection.png)](images/character-selection.png)
+[![flickety](images/pc-ingame-screenshot.png)](images/pc-ingame-screenshot.png)
+[![flickety](images/vr-ingame-screenshot.png)](images/vr-ingame-screenshot.png)
+[![flickety](images/vr-ingame-screenshot-2.png)](images/vr-ingame-screenshot-2.png)
+[![flickety](images/mage-artwork.png)](images/mage-artwork.png)
 {{< /carousel >}}
 
 # 🎬 Trailer

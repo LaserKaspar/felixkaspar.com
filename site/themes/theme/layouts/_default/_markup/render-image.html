@@ -1,1 +1,10 @@
-{{ partial "image.html" (dict "src" .Destination "alt" .PlainText "caption" .Title "page" .Page "lazy" true) }}
+{{ warnf "Painting image '%s'" . }}
+{{ warnf "Image title '%s'" .Text }}
+
+<!-- TODO: Add Caption/Title support -->
+{{ if hasSuffix .Text "flickety" }}
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }} title="{{ . }}"{{ end }} />
+    <!-- TODO: Change to another partial and render down the images, as flickety has a known size and does not need to be responsive -->
+{{ else }}
+    {{ partial "image.html" (dict "src" .Destination "alt" .PlainText "caption" .Title "page" .Page "lazy" true) }}
+{{ end }}

@@ -13,7 +13,7 @@ The vr-player needs to navigate an alien kitchen while the pc-player is recievin
 
 
 {{< carousel >}}
-[![](hero.png)](hero.png)
+[![flickety](hero.png)](hero.png )
 {{< /carousel >}}
 
 {{< fullsize >}}

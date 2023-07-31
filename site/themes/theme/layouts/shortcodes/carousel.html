@@ -1,6 +1,6 @@
 <hr>
 <div class="carousel img-carousel" data-flickity='{"imagesLoaded": true{{ if eq (.Get 0) "wrap" }} , "wrapAround": "true" {{ end }}}'>
-    {{ .Inner | markdownify}}
+    {{ .Page.RenderString .Inner }}
 </div>
 <hr>
 <br>
