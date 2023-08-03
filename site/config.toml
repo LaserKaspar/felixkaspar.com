@@ -1,6 +1,6 @@
-relativeURLs = true
-# baseURL = 'https://felixkaspar.com/new/'
-# canonifyurls = true
+# relativeURLs = true
+baseURL = 'https://felixkaspar.com/'
+canonifyurls = true
 
 languageCode = 'en-us'
 title = 'Felix Kaspar'
