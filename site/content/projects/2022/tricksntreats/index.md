@@ -2,7 +2,7 @@
 title: "Tricks 'n' Treats"
 date: 2023-03-26T00:00:00Z
 draft: false
-tags: ["VR", "Couch"]
+tags: ["VR", "Couch Multiplayer"]
 status: "Doing"
 ondisplay: true
 hero: "hero.png"

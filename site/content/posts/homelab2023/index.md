@@ -18,7 +18,7 @@ This is the main server. It runs most of the software I use, which I am going to
 
 ## 🍓 Rasperry PI 2
 
-This is the backup server, which I already talked about in my post about [backups.](../backupsolutions) It still runs [urbackup](https://www.urbackup.org/) without any issues. It also keeps some backups of docker-volumes from the main server.
+This is the backup server, which I already talked about in [my post about backups.](../backupsolutions) It still runs [urbackup](https://www.urbackup.org/) without any issues. It also keeps some backups of docker-volumes from the main server.
 
 [![Rasperry PI 2](images/rpi2.jpg)](images/rpi2.jpg)
 
@@ -30,17 +30,17 @@ This sbc is only used when I need something portable or want to try something th
 
 # Software
 
-## [Outline](https://www.getoutline.com/)
+## [Outline](https://www.getoutline.com/) {#outline}
 
 This is the newest piece of software that I found. It is a self-hosted alternative to stuff like Obsidian and Notion. I really like I so far but it was pretty hard to set up. It took me almost three days, as I also needed to setup a OIDC server and S3 storage backend. I am now using [Authentik](https://goauthentik.io/) as my Authentication provider and a [minio](https://min.io/) instance for storage.  
 
 [![Outline](images/outline.png)](images/outline.png)
 
-## [Photoprism](https://www.photoprism.app/)
+## [Photoprism](https://www.photoprism.app/) {#photoprism}
 
 I use Photoprism to keep my photo-library organized and also to quickly backup new photos of my phone using PhotoSync. I am thinking about replacing it with Immich, which has made great progress over the last view months, but I still haven't made the switch. But it might happen pretty soon especially because the mobile experience is much better!
 
-## [Planka](https://planka.app/)
+## [Planka](https://planka.app/) {#planka}
 
 We used Trello for project management in my school, but in the future, I will not have access to my projects there anymore, so I exported them into my planka instance. It is not quite as fully featured as Trello, but it is enough for my small side-projects and as an archive for my old trello projects. 
 
@@ -66,7 +66,7 @@ This one is really nice for managing all of my physical paperwork. Especially pa
 
 [![PaperlessNGX](images/paperlessngx.png)](images/paperlessngx.png)
 
-## [Homarr](https://homarr.dev/)
+## [Homarr](https://homarr.dev/) {#homarr}
 
 Homarr is my landing page. From there I can go to any of my services quickly. Especially for new or experimental services where I can't yet remember their names of the subdomain. It automatically queries nice icons, is easy to set up and looks nice.
 
@@ -78,7 +78,7 @@ I use UptimeKuma to monitor my services. If one services has an issue, I get not
 
 [![UptimeKuma](images/uptimekuma.png)](images/uptimekuma.png)
 
-## [AdGuard Home](https://adguard.com/de/adguard-home/overview.html)
+## [AdGuard Home](https://adguard.com/de/adguard-home/overview.html) {#adguard-home}
 
 I primarily use it as a local DNS server to forward my domain to all the services which are in active use.
 

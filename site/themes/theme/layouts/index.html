@@ -12,8 +12,8 @@
     <div class="hero-info padding">
         <h1>{{ .Title }}</h1>
         <div class="info">
-            {{ .Params.sub }} <br>
-            <a target="_blank" href="{{ .Params.locationurl }}">{{ .Params.location }}</a>
+            {{ .Params.sub | markdownify }} <br>
+            <a target="_blank" href="{{ .Site.Params.location.url }}">{{ .Site.Params.location.name }}</a>
         </div>
         <div>{{ partial "tags.html" . }}</div>
         <a href="{{ .Params.contact }}"><div class="cta-button"><i class="fa-solid fa-paper-plane"></i> Send Message</div></a>
@@ -36,7 +36,7 @@
     <h2>Projects</h2>
     {{ $Context := . }}
     <div class="project-display margin-top-small">
-        {{ range (where (where $Context.Site.Pages "Section" "projects") "Params.ondisplay" true).ByDate}}
+        {{ range (where (where $Context.Site.Pages "Section" "projects") "Params.ondisplay" true).ByDate.Reverse}}
             <a href="{{ .RelPermalink }}" draggable="false" class="blank">
                 <div class="sub-element small-padding zoom-parent project">
                     <h3>
@@ -67,10 +67,8 @@
             </a>
         {{ end }}
     </div>
-    <a class="blank" href="/projects"><div class="more-projects-button margin-top-small">See more Projects!</div></a>
+    {{/*  <a class="blank" href="/projects"><div class="more-projects-button margin-top-small">See more Projects!</div></a>  */}}
 </div>
-
-<!--TODO: More projects button-->
 
 <hr>
 

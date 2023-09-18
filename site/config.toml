@@ -6,30 +6,39 @@ languageCode = 'en-us'
 title = 'Felix Kaspar'
 theme = ["theme"]
 
+[params]
+  [params.location]
+    name = "Vienna, Austria"
+    url = "https://goo.gl/maps/HKZMXG8WMpja5GLL8"
+  [[params.location.other]]
+    pre = "fa-solid fa-graduation-cap"
+    name = "HTL Spengergasse"
+    url = "https://spengergasse.at"
+
 [markup.goldmark.renderer]
-unsafe = true
+    unsafe = true
 
 [menu]
-  [[menu.main]]
-    name = "Home"
-    pre = "fa-solid fa-house"
-    url = "/#"
-    weight = 1
-  [[menu.main]]
-    name = "About"
-    pre = "fa-solid fa-id-card"
-    url = "/#about"
-    weight = 2
-  [[menu.main]]
-    name = "Projects"
-    pre = "fa-solid fa-list-check"
-    url = "/#projects"
-    weight = 3
-  [[menu.main]]
-    name = "Blog"
-    pre = "fa-solid fa-book"
-    url = "/#blog"
-    weight = 4
+    [[menu.main]]
+        name = "Home"
+        pre = "fa-solid fa-house"
+        url = "/#"
+        weight = 1
+    [[menu.main]]
+        name = "About"
+        pre = "fa-solid fa-id-card"
+        url = "/#about"
+        weight = 2
+    [[menu.main]]
+        name = "Projects"
+        pre = "fa-solid fa-list-check"
+        url = "/#projects"
+        weight = 3
+    [[menu.main]]
+        name = "Blog"
+        pre = "fa-solid fa-book"
+        url = "/#blog"
+        weight = 4
 
 [taxonomies]
     project = 'projects'

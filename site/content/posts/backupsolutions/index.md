@@ -56,3 +56,5 @@ Configuring is done mostely over the web-gui. Backups are configurable globally 
 - EaseUS Todo Backup
 - kopia
 - AOMEI Backupper
+- restic
+- bareos backup

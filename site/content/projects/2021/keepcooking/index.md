@@ -2,7 +2,7 @@
 title: "Keep Cooking"
 date: 2022-04-04T00:00:00Z
 draft: false
-tags: ["VR", "Multiplayer"]
+tags: ["VR", "Online Multiplayer"]
 status: "Done"
 ondisplay: true
 hero: "hero.png"
