@@ -728,3 +728,19 @@ tr:nth-child(even) {
 .project p {
     margin: 0;
 }
+
+/*Code Highlighting*/
+
+.highlight > *{
+    border-radius: 5px;
+    overflow: auto;
+}
+
+pre {
+    padding: 15px;
+}
+
+td pre {
+    margin: 5px;
+    padding: 0px;
+}

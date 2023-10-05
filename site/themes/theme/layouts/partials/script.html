@@ -5,16 +5,19 @@
 <script>
     //  feather.replace()
 
-    new ScrollBooster({
-        viewport: document.querySelector('.scroll-viewport'),
-        content: document.querySelector('.scroll-content'),
-        scrollMode: 'transform', // use CSS 'transform' property
-        direction: 'horizontal', // allow only horizontal scrolling
-        
-        pointerDownPreventDefault: false,
-        lockScrollOnDragDirection: "horizontal",
-        lockScrollOnDragDirectionTolerance: 20,
-        preventDefaultOnEmulateScroll: "horizontal"
-    });
+    if(document.querySelector('.scroll-viewport')) {
+        new ScrollBooster({
+            viewport: document.querySelector('.scroll-viewport'),
+            content: document.querySelector('.scroll-content'),
+            scrollMode: 'transform', // use CSS 'transform' property
+            direction: 'horizontal', // allow only horizontal scrolling
+            
+            pointerDownPreventDefault: false,
+            lockScrollOnDragDirection: "horizontal",
+            lockScrollOnDragDirectionTolerance: 20,
+            preventDefaultOnEmulateScroll: "horizontal"
+        });
+    }
+    
     
 </script>
