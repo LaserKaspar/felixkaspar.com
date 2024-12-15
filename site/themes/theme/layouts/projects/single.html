@@ -8,13 +8,15 @@
         {{ partial "metadata.html" . }}
     </div>
     {{ if eq .Params.status "Archive" }}
-        This project was archived and does not represent any key points in my journey as a developer.
-        <br>
+        <div class="notice-box">
+            This project was archived and does not represent any key points in my journey as a developer.
+        </div>
     {{ end }}
-    {{ if gt (sub (now.Unix) (.Lastmod.Unix)) (mul (mul 86400 365) 1.5) }}
-        This project seems to have aged and likely doesn't represent my current skillset. Please look at some of my more recent work, to determine my current skills.
+    {{ if gt (sub (now.Unix) (.Lastmod.Unix)) (mul (mul 86400 365) 1.5) }} <!-- Older than 1.5 years -->
+        <div class="notice-box">
+            Please keep in mind, due to the age of the project it likely doesn't represent my current skillset.
+        </div>
     {{ end }}
-    <br><br>
     {{ .Content }}
 </div>
 {{ end }}

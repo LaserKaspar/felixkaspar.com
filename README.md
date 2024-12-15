@@ -8,6 +8,7 @@ https://gohugo.io/templates/shortcode-templates/
 
 Build
 https://gohugo.io/getting-started/usage/#draft-future-and-expired-content
+> hugo
 
 Start Hugo Server
 > hugo server -D

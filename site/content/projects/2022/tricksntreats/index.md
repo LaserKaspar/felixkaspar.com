@@ -30,6 +30,9 @@ Tricks 'N' Treats is an "assymetrical local-multiplayer couchparty-coop vs. vr"-
 [![flickety](images/vr-ingame-screenshot.png)](images/vr-ingame-screenshot.png)
 [![flickety](images/vr-ingame-screenshot-2.png)](images/vr-ingame-screenshot-2.png)
 [![flickety](images/mage-artwork.png)](images/mage-artwork.png)
+[![flickety](images/spg_gamefest_2023.06.15_1.jpg)](images/spg_gamefest_2023.06.15_1.jpg)
+[![flickety](images/spg_gamefest_2023.06.15_2.jpg)](images/spg_gamefest_2023.06.15_2.jpg)
+[![flickety](images/spg_gamefest_2023.06.15_3.jpg)](images/spg_gamefest_2023.06.15_3.jpg)
 {{< /carousel >}}
 
 # 🎬 Trailer

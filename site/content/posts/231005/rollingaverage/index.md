@@ -66,7 +66,7 @@ average = sum(random_ratings) / len(random_ratings)
 print("Classic_Solution: ", average);
 {{< / highlight >}}
 
-#### Running Average
+#### Rolling Average
 
 {{< highlight py2 "linenos=table" >}}
 old_rating_score = 0
@@ -87,26 +87,24 @@ print("Running_Solution:", new_rating_score);
 
 {{< highlight yaml "style=monokai" >}}
 Generated_Numbers: 100_000_000
-Generation_Time:   55.875450134277344 Seconds
+Generation_Time:   55.875450134277344s
 
 Classic_Solution:  5.49981686
-Runtime:           0.4730079174041748 Seconds
+Runtime:           0.4730079174041748s
 
 Running_Solution:  5.499816859997962
-Runtime:           0.0 Seconds # This is only the runtime of one calculations, this will add up when it is done 100_000_000 times but so will the classical soltion.
+Runtime:           0.0s # This is only the runtime of one calculations, this will add up when it is done 100_000_000 times but so will the classical soltion.
 
 Absolute_Error:   -2.0383694732117874e-12
 Percentage_Error: -3.7062497263077724e-11
 {{< / highlight >}}
 
-Recalculating a new rating takes practically no time, and there is no need to get all previous ratings. It could be made more accurate by maintaining all fractions but it has an extremely low error so this is totally usable. 
+Recalculating a new rating takes practically no time, and there is no need to get all previous ratings. It could be made more accurate by maintaining all fractions (I will do this shortly) but it has an extremely low error so this is totally usable. 
 
-Turns out the people who work with giant datasets are using the same type of algorithm (“rolling average“), we just figured out. Although way more optimised and not just hacked together like this one (as you will find out shortly), never the less a cool coincidence (:
-
-## I was wrong. New Algorithm, still rolling but less computation and 0% error.
+## Keeping track of the fractions = Less computation
 
 After thinking about the algorithm I think this is way more complicated than it had to be. All I should need to do is keep track of the sum and the count of the votes.
 
 $$\frac{\text{sum}+\text{new-incoming-user-rating}}{\text{new-rating-count}}=\text{new-rating-score}$$
 
-By keeping track of the sum I can just use the normal formula for an average, But most of the calculations were already done previously and stored in sum. So instead of keeping track of the current rating, the system keeps track of the sum and calculates the rating on the fly.
+By keeping track of the sum I can just use the normal formula for an average. Most of the calculations were already done previously and are now stored in sum. So instead of keeping track of the voting-count & the current rating, the system keeps track of the voting-count & the sum of all votings and calculates the rating on the fly.
