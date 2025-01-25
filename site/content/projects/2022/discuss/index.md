@@ -5,4 +5,9 @@ draft: false
 tags: []
 status: "Archive"
 ---
-Not finished yet
+
+{{< horizontal-buttongroup >}}
+{{< button "/p/discuss" >}}
+Open Game <i class="fa-solid fa-gamepad"></i>
+{{< /button >}}
+{{< /horizontal-buttongroup >}}
