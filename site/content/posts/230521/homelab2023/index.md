@@ -18,7 +18,7 @@ This is the main server. It runs most of the software I use, which I am going to
 
 ## 🍓 Rasperry PI 2
 
-This is the backup server, which I already talked about in [my post about backups.](../backupsolutions) It still runs [urbackup](https://www.urbackup.org/) without any issues. It also keeps some backups of docker-volumes from the main server.
+This is the backup server, which I already talked about in [my post about backups.](../../221207/backupsolutions) It still runs [urbackup](https://www.urbackup.org/) without any issues. It also keeps some backups of docker-volumes from the main server.
 
 [![Rasperry PI 2](images/rpi2.jpg)](images/rpi2.jpg)
 
