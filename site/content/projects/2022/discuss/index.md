@@ -7,7 +7,7 @@ status: "Archive"
 ---
 
 {{< horizontal-buttongroup >}}
-{{< button "/p/discuss" >}}
+{{< button "https://archive.felixkaspar.com/discuss" >}}
 Open Game <i class="fa-solid fa-gamepad"></i>
 {{< /button >}}
 {{< /horizontal-buttongroup >}}

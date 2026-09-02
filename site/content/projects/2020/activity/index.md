@@ -7,7 +7,7 @@ status: "Done"
 ---
 
 {{< horizontal-buttongroup >}}
-{{< button "/p/activity" >}}
+{{< button "https://archive.felixkaspar.com/activity" >}}
 Open Game <i class="fa-solid fa-gamepad"></i>
 {{< /button >}}
 {{< /horizontal-buttongroup >}}
