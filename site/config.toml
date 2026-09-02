@@ -11,6 +11,10 @@ theme = ["theme"]
     name = "Vienna, Austria"
     url = "https://goo.gl/maps/HKZMXG8WMpja5GLL8"
   [[params.location.other]]
+    pre = "fa-solid fa-building-columns"
+    name = "TU Wien"
+    url = "https:/tuwien.ac.at"
+  [[params.location.other]]
     pre = "fa-solid fa-graduation-cap"
     name = "HTL Spengergasse"
     url = "https://spengergasse.at"
