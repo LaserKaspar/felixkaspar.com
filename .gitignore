@@ -1,2 +1,4 @@
-public/
-_gen
+site/public/
+site/resources/_gen/
+*.code-workspace
+.vscode/
