@@ -1,0 +1,65 @@
+# relativeURLs = true
+baseURL = 'https://felixkaspar.com/'
+canonifyurls = true
+
+languageCode = 'en-us'
+title = 'Felix Kaspar'
+theme = ["theme"]
+
+[params]
+  [params.location]
+    name = "Vienna, Austria"
+    url = "https://goo.gl/maps/HKZMXG8WMpja5GLL8"
+  [[params.location.other]]
+    pre = "fa-solid fa-building-columns"
+    name = "TU Wien"
+    url = "https:/tuwien.ac.at"
+  [[params.location.other]]
+    pre = "fa-solid fa-graduation-cap"
+    name = "HTL Spengergasse"
+    url = "https://spengergasse.at"
+
+[markup.goldmark.renderer]
+    unsafe = true
+
+[menu]
+    [[menu.main]]
+        name = "Home"
+        pre = "fa-solid fa-house"
+        url = "/#"
+        weight = 1
+    [[menu.main]]
+        name = "About"
+        pre = "fa-solid fa-id-card"
+        url = "/#about"
+        weight = 2
+    [[menu.main]]
+        name = "Projects"
+        pre = "fa-solid fa-list-check"
+        url = "/#projects"
+        weight = 3
+    [[menu.main]]
+        name = "Blog"
+        pre = "fa-solid fa-book"
+        url = "/#blog"
+        weight = 4
+
+[taxonomies]
+    project = 'projects'
+    tag = 'tags'
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'monokailight'
+    tabWidth = 4

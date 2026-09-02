@@ -1,0 +1,123 @@
+{{ define "main" }}
+
+<div class="hero-section element margin no-padding">
+    <div class="hero-background">
+        <div class="hero-avatar">
+            {{ with resources.Get .Params.hero }}
+                {{ $image := .Resize "600x jpg" }}
+                <img src="{{ $image.RelPermalink }}" draggable="false" alt="Avatar">
+            {{ end }}
+        </div>
+    </div>
+    <div class="hero-info padding">
+        <h1>{{ .Title }}</h1>
+        <div class="info">
+            {{ .Params.sub | markdownify }} <br>
+            <a target="_blank" href="{{ .Site.Params.location.url }}">{{ .Site.Params.location.name }}</a>
+        </div>
+        <div>{{ partial "tags.html" . }}</div>
+        <a class="blank" href="{{ .Params.contact }}"><div class="cta-button"><i class="fa-solid fa-paper-plane"></i> Send Message</div></a>
+    </div>
+</div>
+
+{{- partial "inline-nav.html" . -}}
+
+
+<!-- about -->
+<div class="element margin" id="about">
+    <h2>About Me</h2>
+    {{ .Content }}
+</div>
+
+<hr>
+
+<!-- projects -->
+<div class="container small-padding margin" id="projects">
+    <h2>Projects</h2>
+    {{ $Context := . }}
+    <div class="project-display margin-top-small">
+        {{ range (where (where $Context.Site.Pages "Section" "projects") "Params.ondisplay" true).ByDate.Reverse}}
+            <a href="{{ .RelPermalink }}" draggable="false" class="blank">
+                <div class="sub-element small-padding zoom-parent project">
+                    <h3>
+                        {{ .Title }}
+                    </h3>
+                    {{ if .Params.tags }}
+                        <div class="small-button-container">
+                            {{ with .Params.tags }}
+                                {{ range . }}
+                                    {{ $href := print (absURL "tags/") (urlize .) }}
+                                    <div class="tag-button">
+                                        {{ . }}
+                                    </div>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ if .Params.hero }}
+                        <div class="zooming borderradius-small margin-y-small">
+                            {{ with .Resources.GetMatch .Params.hero }}
+                                {{ $image := .Resize "600x jpg" }}
+                                <img src="{{ $image.RelPermalink }}" draggable="false" alt="{{ .Title }}">
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ .Summary }}
+                </div>
+            </a>
+        {{ end }}
+    </div>
+    {{/*  <a class="blank" href="/projects"><div class="more-projects-button margin-top-small">See more Projects!</div></a>  */}}
+</div>
+
+<hr>
+
+<!-- display blog posts -->
+<div class="container small-padding margin" id="blog">
+    <h2>Blog</h2>
+    {{ range (where .Site.Pages "Section" "posts") }}
+        {{ range .Pages }}
+        <a href="{{ .RelPermalink }}" class="blank">
+            <div class="sub-element margin-top-small no-padding flex flex-flow-swap zoom-parent">
+                <div class="preview-image zooming">
+                    {{ with .Resources.GetMatch .Params.hero }}
+                        {{ $image := .Resize "x600 jpg" }}
+                        <img src="{{ $image.RelPermalink }}" draggable="false" alt="{{ .Title }}">
+                    {{ end }}
+                </div>
+                <div class="padding">
+                    <h3>{{ .Title }}</h3>
+                    {{ .Date.Format "2 Jan 2006" }} - {{ math.Round (div (countwords .Content) 220.0) }} min to read
+                    {{ if .Params.tags }}
+                        <div class="medium-button-container">
+                            {{ with .Params.tags }}
+                                {{ range . }}
+                                    {{ $href := print (absURL "tags/") (urlize .) }}
+                                    <div class="tag-button">
+                                        {{ . }}
+                                    </div>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    <br>
+                    {{ .Summary }}
+                </div>
+            </div>
+        </a>
+           
+        {{ end }}
+    {{ end }}
+</div>
+
+
+<!-- 
+    <h1>list sections</h1>
+
+    {{ range .Site.Sections }}
+        test
+        {{ .Title }}<br>
+    {{ end }} 
+-->
+
+{{ end }}

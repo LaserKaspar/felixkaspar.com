@@ -1,0 +1,5 @@
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time> - {{ math.Round (div (countwords .Content) 220.0) }} min to read
+<br>
+{{ partial "tags.html" . }}

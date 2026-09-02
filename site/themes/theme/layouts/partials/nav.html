@@ -1,0 +1,54 @@
+<div class="element">
+    <h2>Navigation</h2>
+    {{ range .Site.Menus.main }}
+        <i class="{{ .Pre }} fa-fw"></i>
+        <a class="hover" href="{{ .URL }}">
+            {{ $text := print .Name | safeHTML }}
+            {{ $text }}
+        </a>
+        <br>
+    {{ end }}
+</div>
+
+<div class="element">
+    <h2>Location</h2>
+    <i class="fa-solid fa-earth-europe fa-fw"></i>
+    <a class="hover" target="_blank" href="{{ .Site.Params.location.url }}">{{ .Site.Params.location.name }}</a>
+    {{ range .Site.Params.location.other }}
+        <br>
+        <i class="{{ .pre }} fa-fw"></i>
+        <a class="hover" href="{{ .url }}">
+            {{ $text := print .name | safeHTML }}
+            {{ $text }}
+        </a>
+    {{ end }}
+</div>
+
+<div class="element">
+    <h2>Connect</h2>
+    <i class="fa-solid fa-envelope fa-fw"></i><a class="hover" href="mailto://ich@felixkaspar.com" target="_blank">E-Mail</a><br>
+    <i class="fa-brands fa-github fa-fw"></i><a class="hover" href="https://github.com/laserkaspar" target="_blank">Github</a><br>
+    <i class="fa-brands fa-linkedin fa-fw"></i><a class="hover" href="https://www.linkedin.com/in/felix-kaspar-a6807b278/">LinkedIn</a><br>
+    <i class="fa-brands fa-slack fa-fw"></i><a class="hover" href="https://join.slack.com/t/felix-kaspar/shared_invite/zt-1vkr6dq6e-lpTf6Y9DTT7ScxyrNYMtXg">Slack</a><br>
+    
+</div>
+
+<div class="element">
+    <h2>Recent</h2>
+
+    {{ range (where .Site.RegularPages.ByPublishDate.Reverse "Section" "in" (slice "kanban" "posts")) | first 5}}
+        {{ if eq .Section "kanban" }}
+        <i class="fa-solid fa-list-check fa-fw"></i>
+        {{ else if eq .Section "posts" }}
+        <i class="fa-solid fa-book fa-fw"></i>
+        {{ end }}
+        <a class="hover" href="{{ .RelPermalink }}">
+            {{ if .Params.shortTitle }}
+                {{ .Params.shortTitle }}
+            {{ else }}
+                {{ .Title }}
+            {{ end }}
+        </a>
+        <br>
+    {{ end }}
+</div>

@@ -1,0 +1,23 @@
+<!-- <script src="/js/feather.min.js"></script> -->
+<script src="/js/scrollbooster.min.js"></script>
+<!-- <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script> -->
+
+<script>
+    //  feather.replace()
+
+    if(document.querySelector('.scroll-viewport')) {
+        new ScrollBooster({
+            viewport: document.querySelector('.scroll-viewport'),
+            content: document.querySelector('.scroll-content'),
+            scrollMode: 'transform', // use CSS 'transform' property
+            direction: 'horizontal', // allow only horizontal scrolling
+            
+            pointerDownPreventDefault: false,
+            lockScrollOnDragDirection: "horizontal",
+            lockScrollOnDragDirectionTolerance: 20,
+            preventDefaultOnEmulateScroll: "horizontal"
+        });
+    }
+    
+    
+</script>

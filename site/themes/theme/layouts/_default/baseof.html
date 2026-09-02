@@ -1,0 +1,18 @@
+<!--Das wird immer gerendert-->
+<!DOCTYPE html>
+<html lang="en">
+    {{- partial "head.html" . -}}
+    <body>
+        <div class="wrapper">
+            <div class="body">
+                {{- block "main" . }}{{- end }}
+                {{- partial "footer.html" . -}}
+            </div>
+            <div class="side">
+                {{- partial "side-nav.html" . -}}
+            </div>
+            {{- partial "script.html" . -}}
+        </div>
+    </body>
+    {{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
+</html>

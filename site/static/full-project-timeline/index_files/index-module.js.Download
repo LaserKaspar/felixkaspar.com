@@ -1,0 +1,50 @@
+import json from './project-timeline.json' assert {type: 'json'};
+
+import ScrollBooster from './scrollbooster.js';
+
+const sortedProjects = json.projects.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+console.log(sortedProjects);
+
+let projects = [];
+
+Array.prototype.random = function () {
+    return this[Math.floor((Math.random()*this.length))];
+}
+Array.prototype.loop = function (index) {
+    return this[index % this.length];
+}
+
+sortedProjects.forEach(element => {
+    if(element.finishDate == "now")
+        element.finishDate = new Date();
+    if(element.startDate && element.finishDate) {
+        const color = ['red', 'green', 'blue', 'orange'].random(sortedProjects.indexOf(element))
+        
+        projects.push([new Date(element.startDate), new Date(element.finishDate), element.name, color]);
+    }
+});
+
+console.log(new Date(2019, 1, 31));
+
+new Timesheet('timesheet', new Date(2018, 1 - 1, 1), new Date(2023, 12 - 1, 0), projects);
+
+const container = document.getElementById("timesheet");
+container.scrollTo(container.scrollWidth / 2 - window.innerWidth / 2, 0);
+
+let scrollAmount = container.scrollLeft;
+container.addEventListener('wheel', function(event) {
+    event.preventDefault();
+
+    let [x, y] = [event.deltaX, event.deltaY];
+    let magnitude;
+
+    if (x === 0) {
+        magnitude = y > 0 ? -30 : 30;
+    } else {
+        magnitude = x;
+    }
+
+    this.scrollBy({
+      left: -magnitude
+    });
+});
